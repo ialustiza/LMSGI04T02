@@ -23,12 +23,6 @@
 		<main>
 			<h1>Eventos del <xsl:value-of select="$urtea"/></h1>
 			<xsl:apply-templates select="eventos/evento">
-			<!--
-			[xs:integer(substring(fechaHora, 1, 4)) = 2024]
-			-->
-			<!--
-			[year-from-dateTime(fechaHora) = 2024]
-			-->
 			<xsl:sort select="fechaHora" order="descending" data-type="date" />
 			</xsl:apply-templates>
 		</main>
